@@ -1,0 +1,62 @@
+
+
+<MenuWidget>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.8
+        Rectangle:
+            size: self.size
+    Label:
+        color: 1, 1, 0
+        font_size: dp(60)
+        font_name:'fonts/Sackers-Gothic-Std-Light.ttf'
+        text: root.parent.menu_title
+        pos_hint: {"center_x":0.5, "center_y":0.7}
+    Label:
+        text: root.parent.score_txt
+        font_size: dp(30)
+        font_name: 'fonts/Eurostile.ttf'
+        size_hint: .2,.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.55}
+        color: 0,1,0.3,0.8
+    Label:
+        text: root.parent.highest_score_txt
+        font_size: dp(30)
+        font_name: 'fonts/Eurostile.ttf'
+        size_hint: .2,.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.40}
+        color: 0,1,0.3,0.8
+    Button:
+        id: medium
+        font_size: dp(30)
+        font_name:'fonts/Eurostile.ttf'
+        text: "M E D I U M"
+        #text: root.parent.menu_button_title
+        pos_hint: {"center_x":0.5, "center_y":0.25}
+        size_hint: 0.2,0.15
+        on_press: root.parent.medium_game()
+        background_normal:''
+        background_color:0.9, 0.9, 0, .85
+        color: 0, 0, 0
+    Button:
+        id: easy
+        font_size: dp(30)
+        font_name:'fonts/Eurostile.ttf'
+        text: "E A S Y"
+        pos_hint: {"center_x":0.25, "center_y":0.25}
+        size_hint: 0.2,0.15
+        on_press: root.parent.easy_game()
+        background_normal:''
+        background_color:0, 1, 0, .85
+        color: 0, 0, 0
+    Button:
+        id: hard
+        font_size: dp(30)
+        font_name:'fonts/Eurostile.ttf'
+        text: "H A R D"
+        pos_hint: {"center_x":0.75, "center_y":0.25}
+        size_hint: 0.2,0.15
+        on_press: root.parent.hard_game()
+        background_normal:''
+        background_color:1, 0, 0, .85
+        color: 0, 0, 0
